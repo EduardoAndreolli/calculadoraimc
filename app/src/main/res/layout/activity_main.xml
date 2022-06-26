@@ -7,12 +7,111 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/txtViewIMC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="644dp"
+        android:text="@string/txtViewIMC"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_text_altura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="50dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/edit_text_altura"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintBottom_toTopOf="@+id/rdnGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_peso" />
+
+    <EditText
+        android:id="@+id/edit_text_peso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="109dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="29dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/edit_peso"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintBottom_toTopOf="@+id/edit_text_altura"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewIMC" />
+
+    <Button
+        android:id="@+id/btn_calcular"
+        android:layout_width="133dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="131dp"
+        android:layout_marginEnd="147dp"
+        android:layout_marginBottom="59dp"
+        android:onClick="Calcula"
+        android:text="@string/btn_calcular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rdnGroup" />
+
+    <TextView
+        android:id="@+id/textViewResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="535dp"
+        android:layout_marginEnd="235dp"
+        android:layout_marginBottom="177dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rdnGroup"
+        android:layout_width="204dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="107dp"
+        android:layout_marginBottom="115dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_calcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_altura">
+
+        <RadioButton
+            android:id="@+id/rdnFem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rdnFem"
+            android:textAlignment="center" />
+
+        <RadioButton
+            android:id="@+id/rdnMasc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/rdnMasc"
+            android:textAlignment="center" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
